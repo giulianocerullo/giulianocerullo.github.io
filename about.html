@@ -252,18 +252,10 @@
   .ab-hero h1 {
     font-size: 40px;
   }
-  .tl::before {
-    left: 9px;
-  }
   .stop {
     grid-template-columns: 1fr;
     gap: 16px;
     padding-left: 40px;
-  }
-  .stop .pin {
-    left: 10px;
-    top: 8px;
-    transform: translate(-50%, 0);
   }
   .stop .txt,
   .stop:nth-child(even) .txt {
@@ -350,8 +342,14 @@
   opacity: 1;
 }
 @media (max-width: 900px) {
+  .tl::before,
   .tl-fill {
-    left: 9px;
+    left: 10px;
+  }
+  .stop .pin {
+    left: 10px;
+    top: 8px;
+    transform: translate(-50%, 0);
   }
   .js-reveal .stop .txt,
   .js-reveal .stop .img,
