@@ -623,7 +623,6 @@ body {
 }
 @media (max-width: 860px) {
   .personal {
-    background-image: url(hero-luiss-960.jpg);
     min-height: 0;
     padding-top: 72px;
     padding-bottom: 56px;
@@ -1606,9 +1605,6 @@ a.output:focus-visible {
     padding: 40px 28px;
     min-height: 0;
   }
-  .hx-bg {
-    background-image: url(hero-luiss-960.jpg);
-  }
   .hx h1 {
     font-size: 44px;
   }
@@ -1828,4 +1824,14 @@ a.output:focus-visible {
 }
 .tags-inline {
   margin: 0;
+}
+
+/* Phone-sized portrait crops of wide background photos (sharp at 3x) */
+@media (max-width: 600px) {
+  .hx-bg {
+    background-image: url(hero-luiss-mobile.jpg);
+  }
+  .hl-slide .hl-bg.hl-bg-douglas {
+    background-image: url(highlights/douglas-ipo-mobile.jpg) !important;
+  }
 }
