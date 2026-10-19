@@ -44,11 +44,6 @@
   z-index: -2;
   background: url(assets/about/paris-hero.jpg) center 40% / cover;
 }
-@media (max-width: 600px) {
-  .ab-hero .hx-bg {
-    background-image: url(assets/about/paris-hero-mobile.jpg);
-  }
-}
 .ab-hero .wrap {
   display: grid;
   grid-template-columns: 260px minmax(0, 1fr);
@@ -243,26 +238,6 @@
 .ab-cta .hx-btns {
   justify-content: center;
 }
-/* Navy runs to the very bottom (also under the iOS toolbar / overscroll) */
-html,
-body {
-  background: #0b1424;
-}
-.tl-sec {
-  background: var(--bg);
-}
-.ab-cta {
-  padding-bottom: 72px;
-}
-footer.footer-dark {
-  background: #0b1424;
-  border-top: 1px solid rgba(255, 255, 255, 0.12);
-  color: rgba(255, 255, 255, 0.6);
-  padding-bottom: calc(40px + env(safe-area-inset-bottom, 0px));
-}
-footer.footer-dark .link {
-  color: #fff;
-}
 @media (max-width: 900px) {
   .ab-hero .wrap {
     grid-template-columns: 1fr;
@@ -277,10 +252,18 @@ footer.footer-dark .link {
   .ab-hero h1 {
     font-size: 40px;
   }
+  .tl::before {
+    left: 9px;
+  }
   .stop {
     grid-template-columns: 1fr;
     gap: 16px;
     padding-left: 40px;
+  }
+  .stop .pin {
+    left: 10px;
+    top: 8px;
+    transform: translate(-50%, 0);
   }
   .stop .txt,
   .stop:nth-child(even) .txt {
@@ -367,14 +350,8 @@ footer.footer-dark .link {
   opacity: 1;
 }
 @media (max-width: 900px) {
-  .tl::before,
   .tl-fill {
-    left: 10px;
-  }
-  .stop .pin {
-    left: 10px;
-    top: 8px;
-    transform: translate(-50%, 0);
+    left: 9px;
   }
   .js-reveal .stop .txt,
   .js-reveal .stop .img,
@@ -409,8 +386,8 @@ footer.footer-dark .link {
 <body>
 <nav class="nav" aria-label="Main">
   <div class="wrap">
-    <a href="index.html" class="brand">Giuliano Cerullo</a>
-    <ul id="nav-menu"><li><a href="about.html" aria-current="page">About me</a></li><li><a href="index.html#projects">Projects</a></li><li><a href="index.html#skills">Skills</a></li><li><a href="index.html#education">Education</a></li></ul>
+    <a href="#top" class="brand">Giuliano Cerullo</a>
+    <ul id="nav-menu"><li><a href="about.html" aria-current="page">About me</a></li><li><a href="#projects">Projects</a></li><li><a href="#skills">Skills</a></li><li><a href="#education">Education</a></li></ul>
     <div class="nav-right">
       <a href="assets/Giuliano_Cerullo_CV.pdf" class="cta" target="_blank" rel="noopener">CV</a>
       <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Open menu"><span></span><span></span></button>
@@ -482,12 +459,6 @@ m.addEventListener('click',function(e){if(e.target.tagName==='A'){b.setAttribute
     <div class="hx-btns"><a class="hx-btn" href="mailto:giuliano.cerullo@outlook.com">Email me</a><a class="hx-btn ghost" href="assets/Giuliano_Cerullo_CV.pdf" target="_blank" rel="noopener">Download CV</a></div>
   </div>
 </section>
-<footer class="footer-dark">
-  <div class="wrap">
-    <span>© 2026 Giuliano Cerullo</span>
-    <span><a class="link" href="mailto:giuliano.cerullo@outlook.com">giuliano.cerullo@outlook.com</a></span>
-  </div>
-</footer>
 <script>
 (function(){
   var tl=document.querySelector('.tl'); if(!tl||!('IntersectionObserver' in window)) return;
