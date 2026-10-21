@@ -15,7 +15,7 @@
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="stylesheet" href="assets/style.css?v=20261021">
+<link rel="stylesheet" href="assets/style.css?v=20261021b">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='14' fill='%231d1d1f'/><text x='32' y='42' font-family='-apple-system,Helvetica,Arial' font-size='26' font-weight='600' fill='white' text-anchor='middle'>GC</text></svg>">
 <script>document.documentElement.classList.add('js')</script>
 <style>
@@ -86,6 +86,9 @@
   line-height: 1.6;
   max-width: 58ch;
   color: rgba(255, 255, 255, 0.92);
+}
+.ab-hero p + p {
+  margin-top: 12px;
 }
 .ab-hero p strong {
   color: #fff;
@@ -404,6 +407,48 @@ footer.footer-dark .link {
 .tl-sec .lead {
   margin-top: 12px;
 }
+.likes {
+  padding: 40px 0 110px;
+  background: var(--bg);
+  overflow: hidden;
+}
+.likes-track {
+  margin-top: 36px;
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+  mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+}
+.likes-row {
+  display: flex;
+  width: max-content;
+  list-style: none;
+  animation: likes-scroll 45s linear infinite;
+}
+.likes-track:hover .likes-row {
+  animation-play-state: paused;
+}
+.likes-row li {
+  display: flex;
+  align-items: center;
+  gap: 0.3em;
+  font-size: clamp(44px, 7vw, 88px);
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  line-height: 1.1;
+  color: var(--ink);
+  white-space: nowrap;
+  padding-right: 0.9em;
+}
+.likes-row li span {
+  font-size: 0.8em;
+  letter-spacing: 0;
+}
+@keyframes likes-scroll {
+  to { transform: translateX(-50%); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .likes-row { animation: none; flex-wrap: wrap; width: auto; padding: 0 24px; }
+  .likes-row li[aria-hidden] { display: none; }
+}
 </style>
 </head>
 <body>
@@ -432,6 +477,7 @@ m.addEventListener('click',function(e){if(e.target.tagName==='A'){b.setAttribute
       <span class="hx-kind">About me</span>
       <h1>Giuliano Cerullo</h1>
       <p>Currently based in <strong>Paris</strong>, on exchange at <strong>EM Normandie</strong> while completing my <strong>MSc in Management at LUISS</strong>. <strong>Finance, consumer tech and fashion</strong> are the sectors I enjoy most: I like understanding how companies <strong>create value</strong> and how <strong>technology</strong> changes the way they work.</p>
+      <p>Having studied in <strong>Italy, Spain and France</strong>, I bring an <strong>international perspective</strong>, a <strong>data-driven mindset</strong> and an <strong>entrepreneurial attitude</strong>.</p>
       <div class="ab-langs">
         <div class="ab-lang"><b>🇮🇹 Italian</b><span>Native</span></div>
         <div class="ab-lang"><b>🇬🇧 English</b><span>C2</span></div>
@@ -472,6 +518,15 @@ m.addEventListener('click',function(e){if(e.target.tagName==='A'){b.setAttribute
         <span class="pin"></span>
       </div>
     </div>
+  </div>
+</section>
+
+<section class="likes" aria-labelledby="likes-h">
+  <div class="wrap">
+    <h2 class="h-sec" id="likes-h">I also like…</h2>
+  </div>
+  <div class="likes-track">
+    <ul class="likes-row"><li><span aria-hidden="true">🏋️</span>Working out</li><li><span aria-hidden="true">🎧</span>Music</li><li><span aria-hidden="true">🎮</span>Gaming</li><li><span aria-hidden="true">📷</span>Photography</li><li aria-hidden="true"><span>🏋️</span>Working out</li><li aria-hidden="true"><span>🎧</span>Music</li><li aria-hidden="true"><span>🎮</span>Gaming</li><li aria-hidden="true"><span>📷</span>Photography</li></ul>
   </div>
 </section>
 

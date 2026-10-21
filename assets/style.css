@@ -1866,3 +1866,24 @@ a.output:focus-visible {
   height: 14px;
   margin: 0 0.5px;
 }
+
+/* Hero: single statement sentence, sized to keep columns aligned */
+.hx h1 {
+  margin-bottom: 30px;
+}
+.hx-left p {
+  font-size: 26px;
+  line-height: 1.38;
+  letter-spacing: -0.02em;
+  font-weight: 500;
+  max-width: 30ch;
+}
+.hx-btns {
+  margin-top: 40px;
+}
+@media (max-width: 600px) {
+  .hx-left p {
+    font-size: 21px;
+    line-height: 1.42;
+  }
+}
