@@ -410,19 +410,25 @@ footer.footer-dark .link {
 .likes {
   padding: 40px 0 96px;
   background: var(--bg);
+  text-align: center;
 }
 .likes-window {
   margin-top: 20px;
-  height: 1.4em;
   overflow: hidden;
-  font-size: clamp(48px, 8vw, 96px);
+  font-size: clamp(44px, 7vw, 88px);
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 15%, #000 85%, transparent);
+  mask-image: linear-gradient(90deg, transparent, #000 15%, #000 85%, transparent);
 }
 .likes-row {
+  display: flex;
+  width: 500%;
   list-style: none;
-  animation: likes-up 8.4s cubic-bezier(0.7, 0, 0.3, 1) infinite;
+  animation: likes-step 4s cubic-bezier(0.22, 1, 0.36, 1) infinite;
 }
 .likes-row li {
+  flex: 0 0 20%;
   display: flex;
+  justify-content: center;
   align-items: center;
   gap: 0.3em;
   height: 1.4em;
@@ -436,16 +442,23 @@ footer.footer-dark .link {
   font-size: 0.8em;
   letter-spacing: 0;
 }
-@keyframes likes-up {
-  0%, 19% { transform: translateY(0); }
-  25%, 44% { transform: translateY(-20%); }
-  50%, 69% { transform: translateY(-40%); }
-  75%, 94% { transform: translateY(-60%); }
-  100% { transform: translateY(-80%); }
+@media (max-width: 600px) {
+  .likes-window {
+    -webkit-mask-image: linear-gradient(90deg, transparent, #000 3%, #000 97%, transparent);
+    mask-image: linear-gradient(90deg, transparent, #000 3%, #000 97%, transparent);
+  }
+}
+/* Same rhythm as the reference: a new word every 1s, ~0.45s slide */
+@keyframes likes-step {
+  0%, 13.75% { transform: translateX(0); }
+  25%, 38.75% { transform: translateX(-20%); }
+  50%, 63.75% { transform: translateX(-40%); }
+  75%, 88.75% { transform: translateX(-60%); }
+  100% { transform: translateX(-80%); }
 }
 @media (prefers-reduced-motion: reduce) {
-  .likes-window { height: auto; }
-  .likes-row { animation: none; }
+  .likes-window { -webkit-mask-image: none; mask-image: none; }
+  .likes-row { animation: none; width: auto; flex-direction: column; }
   .likes-row li[aria-hidden] { display: none; }
 }
 </style>
