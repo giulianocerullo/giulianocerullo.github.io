@@ -1835,3 +1835,34 @@ a.output:focus-visible {
     background-image: url(highlights/douglas-ipo-mobile.jpg) !important;
   }
 }
+
+/* Hero: small icons before labels */
+.hx-kind {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.hx-kind-logo {
+  width: 22px;
+  height: 22px;
+  border-radius: 5px;
+  flex: none;
+}
+.hx-contact dt {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+.hx-ic {
+  font-size: 14px;
+  line-height: 1;
+  letter-spacing: 0;
+  width: 15px;
+  text-align: center;
+  flex: none;
+}
+.hx-ic-li {
+  width: 14px;
+  height: 14px;
+  margin: 0 0.5px;
+}
