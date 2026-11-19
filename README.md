@@ -2,7 +2,7 @@
 
 Source code of my personal portfolio: **[giulianocerullo.com](https://giulianocerullo.com)**
 
-MSc in Management student at LUISS, on exchange at EM Normandie in Paris. The site collects my academic and personal projects in valuation, strategy, data analysis and digital.
+The site collects my academic and personal projects.
 
 ## Structure
 
