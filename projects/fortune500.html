@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Staying on Top - Fortune 500 Data Analysis in Python • Giuliano Cerullo</title>
+<meta name="description" content="Python analysis of 51 years of Fortune 500 rankings: revenue growth, profitability and five-year retention, 1955–2005.">
+<link rel="canonical" href="https://giulianocerullo.com/projects/fortune500">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Giuliano Cerullo">
+<meta property="og:title" content="Staying on Top - Fortune 500 Data Analysis in Python • Giuliano Cerullo">
+<meta property="og:description" content="Python analysis of 51 years of Fortune 500 rankings: revenue growth, profitability and five-year retention, 1955–2005.">
+<meta property="og:url" content="https://giulianocerullo.com/projects/fortune500">
+<meta property="og:image" content="https://giulianocerullo.com/assets/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="../assets/style.css?v=20261021b">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='14' fill='%231d1d1f'/><text x='32' y='42' font-family='-apple-system,Helvetica,Arial' font-size='26' font-weight='600' fill='white' text-anchor='middle'>GC</text></svg>">
+<script>document.documentElement.classList.add('js')</script>
+<script>(function(){var p=location.pathname,c=p.replace(/\/index(\.html)?$/,'/').replace(/\.html$/,'');if(c!==p)history.replaceState(null,'',c+location.search+location.hash);})();</script>
+</head>
+<body>
+<nav class="nav" aria-label="Main">
+  <div class="wrap">
+    <a href="/" class="brand">Giuliano Cerullo</a>
+    <ul id="nav-menu"><li><a href="/about">About me</a></li><li><a href="/#projects">Projects</a></li><li><a href="/#skills">Skills</a></li><li><a href="/#education">Education</a></li></ul>
+    <div class="nav-right">
+      <a href="../assets/Giuliano_Cerullo_CV.pdf" class="cta" target="_blank" rel="noopener">CV</a>
+      <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Open menu"><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+<script>
+(function(){var b=document.querySelector('.nav-toggle'),m=document.getElementById('nav-menu');if(!b)return;
+b.addEventListener('click',function(){var o=b.getAttribute('aria-expanded')==='true';b.setAttribute('aria-expanded',String(!o));b.setAttribute('aria-label',o?'Open menu':'Close menu');m.classList.toggle('open',!o);});
+m.addEventListener('click',function(e){if(e.target.tagName==='A'){b.setAttribute('aria-expanded','false');m.classList.remove('open');}});})();
+</script>
+<main>
+<div class="p-banner" aria-hidden="true"><img src="../assets/banners/fortune500.jpg" alt="" style="object-position:center 43%"></div>
+<header class="p-head wrap narrow">
+  <a class="back" href="/#projects">All projects</a>
+  <h1>Staying on Top - Fortune 500 Data Analysis in Python</h1>
+  <dl class="props">
+    <dt>Context</dt><dd>EM Normandie Business School • AI-Powered Data Analysis using Python &amp; Agile</dd>
+    <dt>Type</dt><dd><div class="tags tags-inline"><span class="tag ac">Academic Project</span></div></dd>
+    <dt>Period</dt><dd>Oct 2026 – Nov 2026</dd>
+  </dl>
+</header>
+<article class="p-body wrap narrow">
+  <h2>Overview</h2>
+  <p>Exploratory data analysis in Python of 51 years of Fortune 500 rankings (1955–2005, 25,500 company-years), asking whether revenue growth and profitability are associated with staying on the list five years later, and whether staying on top has become harder over time.</p>
+  <p>The project was a team project for AI-Powered Data Analysis using Python &amp; Agile at EM Normandie Business School, delivered in three outputs:</p>
+  <div class="outputs">
+    <a class="output bg" href="../assets/docs/Fortune500_Slides.pdf" target="_blank" rel="noopener"><span class="o-bg" aria-hidden="true" style="background-image:url(../assets/docbg/fortune500-slides.jpg)"></span><span class="o-text"><span class="o-type">Slide deck <span class="o-kind">.pdf file</span></span><span class="o-desc">Five-slide presentation of the research question, approach and main findings</span></span><span class="o-act ext">Open PDF</span></a>
+    <a class="output bg" href="https://github.com/giulianocerullo/fortune500-analysis" target="_blank" rel="noopener"><span class="o-bg" aria-hidden="true" style="background-image:url(../assets/docbg/fortune500-notebook.jpg)"></span><span class="o-text"><span class="o-type">Notebook <span class="o-kind">GitHub repository</span></span><span class="o-desc">Full analysis with code, charts and interpretations, plus a summary of the key findings</span></span><span class="o-act ext">Open on GitHub</span></a>
+    <a class="output bg" href="https://colab.research.google.com/github/giulianocerullo/fortune500-analysis/blob/main/fortune500.ipynb" target="_blank" rel="noopener"><span class="o-bg" aria-hidden="true" style="background-image:url(../assets/docbg/fortune500-colab.jpg)"></span><span class="o-text"><span class="o-type">Google Colab <span class="o-kind">runnable notebook</span></span><span class="o-desc">Run the full analysis in the browser, no installation needed</span></span><span class="o-act ext">Open in Colab</span></a>
+  </div>
+  <h2>Key Tasks</h2>
+  <ul class="bul">
+    <li><strong>Data cleaning</strong> in <strong>pandas</strong>: missing profits, duplicate company names, sanity checks on 25,500 rows</li>
+    <li><strong>Feature engineering</strong>: profit margin, size groups, loss flag, year-over-year <strong>revenue growth</strong> and <strong>five-year retention</strong> built with merges</li>
+    <li><strong>Exploratory analysis</strong> with <strong>matplotlib</strong> and <strong>seaborn</strong>: distributions, outliers, time trends and heatmaps by decade and size group</li>
+    <li>Detected a <strong>structural break</strong> in 1995, when Fortune added service companies to the list, and corrected the retention analysis for it</li>
+    <li>Tested whether results hold <strong>within each size group</strong> to rule out a pure size effect</li>
+  </ul>
+  <h2>Core Insights</h2>
+  <div class="insights">
+    <p class="insight">Staying on top got harder: <strong>five-year retention</strong> fell from about <strong>83%</strong> (1950s–1970s) to <strong>70–74%</strong> (1980s–2000), even among the top 100 companies</p>
+    <p class="insight">Losses became far more common: from <strong>under 5%</strong> of companies before 1980 to peaks of <strong>31.8%</strong> in 1993 and <strong>24.2%</strong> in 2003, while the median margin stayed at <strong>4–5%</strong></p>
+    <p class="insight">Profitability matters more than growth: growing and profitable companies stayed on the list <strong>83%</strong> of the time, against <strong>56%</strong> for those that were neither, with the gap holding in every size group</p>
+    <p class="insight">Larger companies grow more slowly: median annual growth of <strong>7.1%</strong> for ranks 1–100 against <strong>9.7%</strong> for ranks 401–500</p>
+  </div>
+</article>
+<nav class="p-nav wrap narrow" aria-label="More projects">
+  <a href="/projects/gamethology"><span>‹ Previous</span><h4>Gamethology - Gaming Community</h4></a>
+  <a class="next" href="/projects/pirelli-hankook"><span>Next ›</span><h4>Pirelli vs Hankook Equity Valuation</h4></a>
+</nav>
+</main>
+<footer>
+  <div class="wrap">
+    <span>© 2026 Giuliano Cerullo</span>
+    <span><a class="link" href="mailto:giuliano.cerullo@outlook.com">giuliano.cerullo@outlook.com</a></span>
+  </div>
+</footer>
+</body>
+</html>
